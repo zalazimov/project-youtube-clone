@@ -1,0 +1,11 @@
+.active {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+nav .navbar {
+  background-color: red;
+}
