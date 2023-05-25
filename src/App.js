@@ -14,27 +14,30 @@ import Navbar from "./Components/Navbar/Navbar";
 import "./App.css";
 
 export default function App() {
-  // const [videoId, setVideoId] = useState("");
+  const [videoId, setVideoId] = useState([]);
 
-  // async function fetchData() {
-  //   try {
-  //     const response = await axios.get(
-  //       `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=snippet&type=video&q=cats`
-  //     );
+  async function fetchData() {
+    try {
+      const response = await axios.get(
+        `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}&part=snippet&type=video&q=cats`
+      );
 
-  //     if (response.data.items.length > 0) {
-  //       // Assuming you want to play the first video in the search results
-  //       const firstVideoId = response.data.items[0].id.videoId;
-  //       setVideoId(firstVideoId);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error fetching YouTube data:", error.response);
-  //   }
-  // }
+      if (response.data.items.length > 0) {
+        //   // Assuming you want to play the first video in the search results
+        //   // const firstVideoId = response.data.items[0].id.videoId;
+        setVideoId(response.data.items);
+      }
+      // console.log(response.data.items);
+    } catch (error) {
+      console.error("Error fetching YouTube data:", error.response);
+    }
+  }
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  // console.log(process.env.REACT_APP_API_KEY);
 
   return (
     <div className="App">
@@ -46,7 +49,8 @@ export default function App() {
           {/* <Route path="/videos/:id" element={<ShowVideo />} /> */}
         </Routes>
       </Router>
-      {/* {videoId && (
+
+      {videoId && (
         <iframe
           width="560"
           height="315"
@@ -55,7 +59,7 @@ export default function App() {
           frameBorder="0"
           allowFullScreen
         />
-      )} */}
+      )}
     </div>
   );
 }
