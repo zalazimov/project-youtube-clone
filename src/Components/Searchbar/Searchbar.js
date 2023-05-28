@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router";
 
 function Searchbar() {
   const [input, setInput] = useState("");
+
+  const navigate = useNavigate();
 
   function handleChange(event) {
     setInput(event.target.value);
@@ -11,6 +14,7 @@ function Searchbar() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    navigate(`/resultslist/${input}`);
   }
 
   return (
