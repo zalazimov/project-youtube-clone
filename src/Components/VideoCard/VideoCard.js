@@ -1,7 +1,16 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-function VideoCard() {
-  return <div></div>;
+export default function VideoCard({ video }) {
+  if (!video.id) return;
+  // if writing 'return' by itself and you don't want to return anything (example without 'null'), just write 'return' and that works. See line 4 above.
+  return (
+    <div>
+      <Link to={`/video/${video.id}`}>
+        <div>
+          <img src={video.snippet.thumbnails.medium.url} alt="video" />
+        </div>
+        <h4>{video.snippet.title}</h4>
+      </Link>
+    </div>
+  );
 }
-
-export default VideoCard;
