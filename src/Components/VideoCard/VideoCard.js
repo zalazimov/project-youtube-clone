@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function VideoCard({ video }) {
   if (!video.id) return;
-  // if writing 'return' by itself and you don't want to return anything (example without 'null'), just write 'return' and that works. See line 4 above.
+
   return (
     <div>
       <Link to={`/video/${video.id}`}>
