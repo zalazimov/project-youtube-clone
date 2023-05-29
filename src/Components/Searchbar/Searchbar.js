@@ -15,11 +15,12 @@ function Searchbar() {
   function handleSubmit(event) {
     event.preventDefault();
     navigate(`/resultslist/${input}`);
+    setInput("");
   }
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="mx-5 my-2" onSubmit={handleSubmit}>
         <input
           type="text"
           value={input}

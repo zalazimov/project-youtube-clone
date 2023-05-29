@@ -11,7 +11,7 @@ export default function Home({ setError, error }) {
     async function getPopularVideos() {
       try {
         const rawResult = await axios.get(
-          `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&chart=mostPopular&maxResults=20&regionCode=US&key=${process.env.REACT_APP_API_KEY}`
+          `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20contentDetails%2C%20statistics&chart=mostPopular&maxResults=21&regionCode=US&key=${process.env.REACT_APP_API_KEY}`
         );
 
         const result = rawResult.data.items;
@@ -28,7 +28,7 @@ export default function Home({ setError, error }) {
   return (
     <div>
       <Modal />
-      <h2>Videos</h2>
+      <h2></h2>
       <ListOfVideos vidList={vidList} />
     </div>
   );

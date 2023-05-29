@@ -5,20 +5,24 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar bg-danger navbar-expand-sm">
+    <nav className="navbar bg-danger navbar-expand-sm mb-5">
       <div className="container-fluid">
-        <a className="navbar-brand text-white" href="#">
+        <NavLink
+          className="navbar-brand text-white fs-2
+          mx-5 link-underline link-underline-opacity-0"
+          to="/"
+        >
           Youtube
-        </a>
-        <ul className="navbar-nav me-auto mb-2 mb-sm-0">
+        </NavLink>
+        <ul className="navbar-nav me-auto mb-2 mb-sm-2">
           <li className="">
-            <NavLink className="nav-link text-white" to="/">
+            <NavLink className="nav-link text-white fs-4" to="/">
               Home
             </NavLink>
           </li>
           <li className="">
             <NavLink
-              className="nav-link text-white"
+              className="nav-link text-white fs-4"
               // className={({ isActive }) => (isActive ? "active" : "")}
               to="/About"
             >
