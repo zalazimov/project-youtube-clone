@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import YouTube from "react-youtube";
 import React, { useState, useEffect } from "react";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import About from "./Components/About/About";
