@@ -38,6 +38,7 @@ function ResultsList() {
         {vidList.map(
           (video) =>
             video.id.videoId && (
+              // video.thumbnails &&
               <div
                 onClick={() => handleClickedVideo(video.id.videoId)}
                 key={video.etag}
