@@ -19,15 +19,6 @@ With great pride, we present our project—a React application designed to lever
 
 </p>
 
-# Screenshots
-
-<ul>
-    <img src="#"/>
-    <img src="#"/>
-    <img src="#"/>
-    <img src="#"/>
-</ul>
-
 <a href="https://trello.com/b/ZbMUafvG">Trello</a>
 
 <a href="https://zalazimov.github.io/project-youtube-clone/">GitHub Repository</a>
