@@ -42,7 +42,7 @@ function ResultsList() {
               <div
                 onClick={() => handleClickedVideo(video.id.videoId)}
                 key={video.etag}
-                className="col-12 col-sm-6 col-md-4"
+                className="col-12 col-sm-6 col-md-4 mb-4"
               >
                 <VideoCard video={video} />
               </div>
