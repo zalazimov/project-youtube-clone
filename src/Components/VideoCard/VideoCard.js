@@ -5,11 +5,18 @@ export default function VideoCard({ video }) {
 
   return (
     <div>
-      <Link to={`/video/${video.id}`}>
-        <div>
-          <img src={video.snippet.thumbnails.medium.url} alt="video" />
+      <Link className="text-decoration-none" to={`/video/${video.id}`}>
+        <div className="container">
+          <img
+            className="rounded"
+            src={video.snippet.thumbnails.medium.url}
+            alt="video"
+          />
+          <h5 className="mt-2 text-black">
+            {video.snippet.title.slice(0, 30)}...
+          </h5>
+          <h6 className="text-black fw-bold">{video.snippet.channelTitle}</h6>
         </div>
-        <h4>{video.snippet.title}</h4>
       </Link>
     </div>
   );

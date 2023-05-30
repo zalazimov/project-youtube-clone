@@ -33,29 +33,3 @@ export default function Home({ setError, error }) {
     </div>
   );
 }
-
-// To change the state for the user search to change the value of the array
-// const getUserSearch = async () => {
-//       try {
-//         const data = await fetchUserSearch(input);
-//         console.log(data);
-//         setSearchVideos(data);
-//       } catch (e) {
-//         console.log(e);
-//       }
-//     };
-//     getUserSearch();
-//   }, [input]);
-
-// The way to fectch the information from API when doing a search. This goes inside the useEffect.
-// const getMostPopular = async () => {
-//       try {
-//         const data = await fetchMostPopular();
-//         console.log(data);
-//         setVideos(data);
-//       } catch (e) {
-//         console.log(e);
-//       }
-//     };
-//     getMostPopular();
-//   }, []);
