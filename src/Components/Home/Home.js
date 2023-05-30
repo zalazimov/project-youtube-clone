@@ -47,7 +47,7 @@ export default function Home({ setError, error }) {
 //     getUserSearch();
 //   }, [input]);
 
-// The way to fectch the information fro API when doing a search. This goes inside the useEffect.
+// The way to fectch the information from API when doing a search. This goes inside the useEffect.
 // const getMostPopular = async () => {
 //       try {
 //         const data = await fetchMostPopular();

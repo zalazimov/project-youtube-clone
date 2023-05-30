@@ -10,8 +10,6 @@ function Searchbar() {
     setInput(event.target.value);
   }
 
-  //   console.log(input);
-
   function handleSubmit(event) {
     event.preventDefault();
     navigate(`/resultslist/${input}`);
