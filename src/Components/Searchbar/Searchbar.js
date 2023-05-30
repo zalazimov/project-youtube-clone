@@ -25,9 +25,11 @@ function Searchbar() {
           type="text"
           value={input}
           onChange={handleChange}
-          placeholder="Search..."
+          placeholder="Find a Video..."
         ></input>
-        <button type="submit">Search</button>
+        <button className="" type="submit">
+          Search
+        </button>
       </form>
     </div>
   );

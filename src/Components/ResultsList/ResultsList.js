@@ -15,7 +15,7 @@ function ResultsList() {
     async function getVideos() {
       try {
         const rawResult = await axios.get(
-          `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${search}&key=${process.env.REACT_APP_API_KEY}`
+          `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=21&q=${search}&key=${process.env.REACT_APP_API_KEY}`
         );
         const result = rawResult.data.items;
         setVidList(result);
@@ -39,6 +39,7 @@ function ResultsList() {
         {vidList.map(
           (video) =>
             video.id.videoId && (
+              // video.thumbnails &&
               <div
                 onClick={() => handleClickedVideo(video.id.videoId)}
                 key={video.etag}
