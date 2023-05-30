@@ -1,5 +1,6 @@
 import React from "react";
 import zalman from "./images/zalman.jpg";
+import Jennifer from "./images/Jennifer.jpg";
 import "./About.css";
 
 function About() {
@@ -34,7 +35,7 @@ function About() {
             </p>
           </p>
           <p className="col-5 mx-1">
-            <img src={zalman} alt="Zalman" className="image-style mb-1" />
+            <img src={Jennifer} alt="Jen" className="image-style mb-1" />
             <p className="text-center fs-2">Jennifer Peterson</p>An aspiring
             Software Developer on my journey to learn as much as I possibly can
             in order to help elevate black women and girls in tech.
