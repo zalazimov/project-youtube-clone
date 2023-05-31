@@ -26,7 +26,7 @@ function Searchbar() {
           placeholder="Find a Video..."
         ></input>
         <button className="btn" type="submit">
-          Search
+          Search 🔍
         </button>
       </form>
     </div>
