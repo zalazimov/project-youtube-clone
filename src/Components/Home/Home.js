@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { getVideos, getPopularVideos } from "../Fetch/Fetch";
 import ListOfVideos from "../ListOfVideos/ListOfVideos";
 import Modal from "../Modal/Modal";
 
@@ -15,7 +14,6 @@ export default function Home({ setError, error }) {
         );
 
         const result = rawResult.data.items;
-        // console.log(result);
 
         setVidList(result);
       } catch (error) {

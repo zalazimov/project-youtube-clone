@@ -20,8 +20,9 @@ function ResultsList() {
         const result = rawResult.data.items;
         setVidList(result);
         // console.log(result);
+        // return result ----Maybe we need this??
       } catch (error) {
-        console.log(error);
+        // con/sole.log(error);
       }
     }
 
