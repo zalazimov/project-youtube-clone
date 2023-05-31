@@ -25,8 +25,8 @@ function Searchbar() {
           onChange={handleChange}
           placeholder="Find a Video..."
         ></input>
-        <button className="btn" type="submit">
-          Search 🔍
+        <button className="btn btn-dark" type="submit">
+          Search
         </button>
       </form>
     </div>
