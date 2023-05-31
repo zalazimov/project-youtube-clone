@@ -10,7 +10,7 @@
 </ul>
 </p>
 
-# About
+# About:::
 
 <p>
 Our collaborative group project has been a remarkable journey of teamwork and synergy among all members. We embarked on this project by establishing effective communication channels and task management systems. We utilized a Trello board to track our progress, coordinated our efforts through GitHub commits, and efficiently divided the workload. This experience has not only been a tremendous learning opportunity but also an essential aspect of our field.

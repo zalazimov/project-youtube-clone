@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 function Searchbar() {
   const [input, setInput] = useState("");
@@ -25,7 +25,7 @@ function Searchbar() {
           onChange={handleChange}
           placeholder="Find a Video..."
         ></input>
-        <button className="btn btn-dark" type="submit">
+        <button className="btn btn-light" type="submit">
           Search
         </button>
       </form>
