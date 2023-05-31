@@ -27,7 +27,6 @@ export default function Home({ setError, error }) {
 
   return (
     <div>
-      <Modal />
       <h2></h2>
       <ListOfVideos vidList={vidList} />
     </div>
