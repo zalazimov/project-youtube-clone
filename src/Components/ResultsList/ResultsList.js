@@ -20,8 +20,9 @@ function ResultsList() {
         const result = rawResult.data.items;
         setVidList(result);
         // console.log(result);
+        // return result ----Maybe we need this??
       } catch (error) {
-        console.log(error);
+        // con/sole.log(error);
       }
     }
 
@@ -42,7 +43,7 @@ function ResultsList() {
               <div
                 onClick={() => handleClickedVideo(video.id.videoId)}
                 key={video.etag}
-                className="col-12 col-sm-6 col-md-4"
+                className="col-12 col-sm-6 col-md-4 mb-5"
               >
                 <VideoCard video={video} />
               </div>
