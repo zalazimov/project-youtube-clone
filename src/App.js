@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
-// import Modal from "./Components/Modal/Modal";
 import Navbar from "./Components/Navbar/Navbar";
 import ResultsList from "./Components/ResultsList/ResultsList";
 import ShowVideo from "./Components/ShowVideo/ShowVideo";
@@ -11,7 +10,6 @@ import ShowVideo from "./Components/ShowVideo/ShowVideo";
 import "./App.css";
 
 export default function App() {
-  //Create an error state
   const [error, setError] = useState(false);
 
   return (

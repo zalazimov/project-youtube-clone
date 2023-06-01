@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ListOfVideos from "../ListOfVideos/ListOfVideos";
-import Modal from "../Modal/Modal";
+import ModalError from "../ModalError/ModalError";
 
-export default function Home({ setError, error }) {
+export default function Home() {
   const [vidList, setVidList] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function getPopularVideos() {
@@ -17,7 +18,7 @@ export default function Home({ setError, error }) {
 
         setVidList(result);
       } catch (error) {
-        console.log(error);
+        setError("Uh oh! Something went wrong.");
       }
     }
     getPopularVideos();
@@ -27,6 +28,11 @@ export default function Home({ setError, error }) {
     <div>
       <h2></h2>
       <ListOfVideos vidList={vidList} />
+      <ModalError
+        isOpen={!!error}
+        onClose={() => setError(false)}
+        errorMessage={error}
+      />
     </div>
   );
 }

@@ -6,11 +6,7 @@ export default function ListOfVideos({ vidList }) {
     <div className="container">
       <div className="row">
         {vidList.map((video) => (
-          <div
-            key={video.etag}
-            className="col-12 col-sm-6 col-md-4 mb-5"
-            // onClick={handleOnClick}
-          >
+          <div key={video.etag} className="col-12 col-sm-6 col-md-4 mb-5">
             <VideoCard video={video} />
           </div>
         ))}

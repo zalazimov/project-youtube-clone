@@ -27,8 +27,6 @@ function ShowVideo() {
     getSingleFetch();
   }, [id]);
 
-  // const published = new Date(video.snippet.publishedAt).toLocaleDateString();
-
   return (
     <div>
       <Youtube videoId={id} />
@@ -36,7 +34,6 @@ function ShowVideo() {
         <>
           <h3 className="fw-bold">{video.snippet.title}</h3>
           <h4 className="channel-title">{video.snippet.channelTitle}</h4>
-          {/* <p className="published-date">Published {published}</p> */}
         </>
       )}
     </div>
