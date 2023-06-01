@@ -43,5 +43,3 @@ With great pride, we present our project: a React application designed to levera
 
 <img src="src/Components/About/images/zalman.jpg" width="100" height="100"/>
 <img src="src/Components/About/images/Jennifer.jpg" width="100" height="100">
-<br/>
-<p>Zalman A. & Jennifer P.</p>
