@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import VideoCard from "../VideoCard/VideoCard";
-import Searchbar from "../Searchbar/Searchbar";
+import ModalError from "../ModalError/ModalError";
 import { useNavigate, useParams } from "react-router";
-import { Navigate } from "react-router";
 
 function ResultsList() {
   const [vidList, setVidList] = useState([]);
+  const [error, setError] = useState(false);
   const { search } = useParams();
   const navigate = useNavigate();
 
-  // console.log(search);
   useEffect(() => {
     async function getVideos() {
       try {
@@ -19,10 +18,8 @@ function ResultsList() {
         );
         const result = rawResult.data.items;
         setVidList(result);
-        // console.log(result);
-        // return result ----Maybe we need this??
       } catch (error) {
-        // con/sole.log(error);
+        setError("Uh oh! Something went wrong.");
       }
     }
 
@@ -39,7 +36,6 @@ function ResultsList() {
         {vidList.map(
           (video) =>
             video.id.videoId && (
-              // video.thumbnails &&
               <div
                 onClick={() => handleClickedVideo(video.id.videoId)}
                 key={video.etag}
@@ -49,6 +45,11 @@ function ResultsList() {
               </div>
             )
         )}
+        <ModalError
+          isOpen={!!error}
+          onClose={() => setError(false)}
+          errorMessage={error}
+        />
       </div>
     </div>
   );
