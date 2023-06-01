@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home";

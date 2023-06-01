@@ -10,6 +10,7 @@ function About() {
       <img
         className="logo"
         src="https://www.freeiconspng.com/uploads/hd-youtube-logo-png-transparent-background-20.png"
+        alt="logo"
       />
       <div className="row">
         <p className="col-lg-4"></p>

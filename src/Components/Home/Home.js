@@ -26,7 +26,6 @@ export default function Home() {
 
   return (
     <div>
-      <h2></h2>
       <ListOfVideos vidList={vidList} />
       <ModalError
         isOpen={!!error}
